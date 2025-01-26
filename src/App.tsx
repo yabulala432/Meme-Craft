@@ -62,6 +62,7 @@ export default function CallToActionWithVideo() {
           overflow={"hidden"}
           display={"flex"}
           alignItems={"center"}
+          justifyContent={"center"}
           flexDir={"column"}
           gap={4}
         >
@@ -70,7 +71,6 @@ export default function CallToActionWithVideo() {
               display="flex"
               alignItems="center"
               justifyContent="center"
-              // height="100%"
               border="2px dashed gray"
               borderRadius="md"
               p={4}
@@ -153,7 +153,11 @@ export default function CallToActionWithVideo() {
               value={caption}
               onChange={(e) => setCaption(e.target.value)}
             />
-            <Grid templateColumns="repeat(2, 1fr)" gap="6">
+            <Grid
+              display={image ? "grid" : "none"}
+              templateColumns="repeat(2, 1fr)"
+              gap="6"
+            >
               <Box width={"300px"}>
                 <DownloadButton onClick={downloadMeme}>
                   Download Meme
